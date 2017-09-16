@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>710</width>
+    <height>585</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Steering Behaviors - Another Big Shoal</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="GLWidget" name="widget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::CustomContextMenu</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>710</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_New"/>
+    <addaction name="action_Quit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <addaction name="action_Weighted_Sum"/>
+    <addaction name="action_Prioritized"/>
+    <addaction name="action_Dithered"/>
+    <addaction name="action_Smoothing"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;Add</string>
+    </property>
+    <addaction name="action_Obstacles"/>
+    <addaction name="action_Walls"/>
+   </widget>
+   <widget class="QMenu" name="menu_Levels">
+    <property name="title">
+     <string>&amp;Levels</string>
+    </property>
+    <addaction name="action_Adjust_Levels"/>
+   </widget>
+   <widget class="QMenu" name="menu_View_2">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="action_Wander_Circle"/>
+    <addaction name="action_Detection_Box"/>
+    <addaction name="action_Steering_Force"/>
+    <addaction name="actionFeelers"/>
+    <addaction name="action_Path"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Levels"/>
+   <addaction name="menu_View_2"/>
+  </widget>
+  <action name="action_Quit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="action_Weighted_Sum">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Weighted Sum</string>
+   </property>
+  </action>
+  <action name="action_Prioritized">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Prioritized</string>
+   </property>
+  </action>
+  <action name="action_Dithered">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Dithered</string>
+   </property>
+  </action>
+  <action name="action_Obstacles">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Obstacles</string>
+   </property>
+  </action>
+  <action name="action_Walls">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Walls</string>
+   </property>
+  </action>
+  <action name="action_Keys">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Keys</string>
+   </property>
+  </action>
+  <action name="action_FPS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;FPS</string>
+   </property>
+  </action>
+  <action name="action_Smoothing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Smoothing</string>
+   </property>
+  </action>
+  <action name="action_New">
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+  </action>
+  <action name="action_Adjust_Levels">
+   <property name="text">
+    <string>&amp;Adjust Levels</string>
+   </property>
+  </action>
+  <action name="action_Wander_Circle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Wander Circle</string>
+   </property>
+  </action>
+  <action name="action_Detection_Box">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Detection Box</string>
+   </property>
+  </action>
+  <action name="action_Steering_Force">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Steering Force</string>
+   </property>
+  </action>
+  <action name="actionFeelers">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Feelers</string>
+   </property>
+  </action>
+  <action name="action_Path">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Path</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>glwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdjustDialog</class>
+ <widget class="QDialog" name="AdjustDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>318</width>
+    <height>381</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Adjust Levels</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="SterinForceLabel">
+     <property name="text">
+      <string>Max. Steering Force</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="MaxSteeringForce">
+     <property name="minimum">
+      <number>50</number>
+     </property>
+     <property name="maximum">
+      <number>800</number>
+     </property>
+     <property name="value">
+      <number>400</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="MaxSpeedLabel">
+     <property name="text">
+      <string>Max. Speed</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="MaxSpeed">
+     <property name="minimum">
+      <number>50</number>
+     </property>
+     <property name="maximum">
+      <number>500</number>
+     </property>
+     <property name="value">
+      <number>150</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="WanderJitterLabel">
+     <property name="text">
+      <string>Wander Jitter</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="WanderJitter">
+     <property name="maximum">
+      <number>500</number>
+     </property>
+     <property name="sliderPosition">
+      <number>80</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="WanderDistanceLabel">
+     <property name="text">
+      <string>Wander Distance</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="WanderDistance">
+     <property name="maximum">
+      <number>400</number>
+     </property>
+     <property name="singleStep">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>20</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="WanderRAdiusLAbel">
+     <property name="text">
+      <string>Wander Radius</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="WanderRadius">
+     <property name="maximum">
+      <number>40</number>
+     </property>
+     <property name="value">
+      <number>12</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="SeparationWeightLabel">
+     <property name="text">
+      <string>Separation Weight</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="SeparationWeight">
+     <property name="maximum">
+      <number>50</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="AlignWeightLabel">
+     <property name="text">
+      <string>Align Weight</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="AlignWeight">
+     <property name="maximum">
+      <number>50</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="CohesionWeightLabel">
+     <property name="text">
+      <string>Cohesion Weight</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="CohesionWeight">
+     <property name="maximum">
+      <number>50</number>
+     </property>
+     <property name="value">
+      <number>20</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="SeekDistanceLabel">
+     <property name="text">
+      <string>Seek Distance</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="SeekDistance">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>MaxSteeringForce</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeMaxSteeringForce(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>381</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MaxSpeed</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeMaxSpeed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>60</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WanderJitter</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeWanderJitter(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>461</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WanderDistance</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeWanderDistance(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>458</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>WanderRadius</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeWanderRadius(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SeparationWeight</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeSeparationWeight(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>314</x>
+     <y>316</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AlignWeight</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeAlignmentWeight(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>108</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>331</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CohesionWeight</sender>
+   <signal>sliderMoved(int)</signal>
+   <receiver>AdjustDialog</receiver>
+   <slot>changeCohesionWeight(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>233</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>439</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>changeMaxSteeringForce(int)</slot>
+  <slot>changeMaxSpeed(int)</slot>
+  <slot>changeWanderJitter(int)</slot>
+  <slot>changeWanderDistance(int)</slot>
+  <slot>changeWanderRadius(int)</slot>
+  <slot>changeSeparationWeight(int)</slot>
+  <slot>changeAlignmentWeight(int)</slot>
+  <slot>changeCohesionWeight(int)</slot>
+  <slot>slot2()</slot>
+ </slots>
+</ui>

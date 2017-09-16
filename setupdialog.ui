@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetupDialog</class>
+ <widget class="QDialog" name="SetupDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>618</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::CustomContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_1">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="NumAgents_label">
+         <property name="text">
+          <string>Number of Agents</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="NumAgents">
+         <property name="maximum">
+          <number>1000</number>
+         </property>
+         <property name="value">
+          <number>300</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Vehicle Scale</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="doubleSpinBox">
+         <property name="value">
+          <double>3.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="NumObstacles_label">
+         <property name="text">
+          <string>Number of Obstacles</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="NumObstacles">
+         <property name="value">
+          <number>7</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="MinRAdius_label">
+         <property name="text">
+          <string>Min. Obstacle Radius</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="MinObsRadius">
+         <property name="maximum">
+          <double>500.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>10.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="MaxObstacle_label">
+         <property name="text">
+          <string>Max. Obstacle Radius</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="MaxObsRadius">
+         <property name="maximum">
+          <double>500.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>30.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="SmotinhgSAmples_label">
+         <property name="text">
+          <string>Num. Smoothing Samples</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="SmoothingSamples">
+         <property name="minimum">
+          <number>5</number>
+         </property>
+         <property name="maximum">
+          <number>50</number>
+         </property>
+         <property name="value">
+          <number>10</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="CellsX_label">
+         <property name="text">
+          <string>Num. Cells X</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="NumCellsX">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>7</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="CellsY_label">
+         <property name="text">
+          <string>Num. Cells Y</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="NumCellsY">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+         <property name="value">
+          <number>7</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Steering</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="Tweaker_label">
+         <property name="text">
+          <string>Steering Force Tweaker</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="SteeringTweaker">
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>200.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Force_label">
+         <property name="text">
+          <string>Steering Force </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="SteeringForce">
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>2.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="MaxSpeed_label">
+         <property name="text">
+          <string>Max. Speed</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="MaxSpeed">
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>150.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Mass_label">
+         <property name="text">
+          <string>Vehicle Mass</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="VehicleMass">
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="Scale_label">
+         <property name="text">
+          <string>Vehicle Scale</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDoubleSpinBox" name="VehicleScale">
+         <property name="value">
+          <double>3.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Modalities</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QCheckBox" name="Seek">
+         <property name="text">
+          <string>Seek</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QCheckBox" name="Flee">
+         <property name="text">
+          <string>Flee</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="Arrive">
+         <property name="text">
+          <string>Arrive</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="Hide">
+         <property name="text">
+          <string>Hide</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="Evade">
+         <property name="text">
+          <string>Evade</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QCheckBox" name="Interpose">
+         <property name="text">
+          <string>Interpose</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="Pursuit">
+         <property name="text">
+          <string>Pursuit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="OffsetPursuit">
+         <property name="text">
+          <string>Offset Pursuit</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="Wander">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Wander</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="FollowPath">
+         <property name="text">
+          <string>Follow Path</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QCheckBox" name="Separation">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Separation</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="Alignment">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Alignment</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QCheckBox" name="Cohesion">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Cohesion</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QCheckBox" name="Flock">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>Flock</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QCheckBox" name="Shoal">
+         <property name="text">
+          <string>Shoal</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>Seek</zorder>
+      <zorder>Arrive</zorder>
+      <zorder>Flock</zorder>
+      <zorder>Hide</zorder>
+      <zorder>Flee</zorder>
+      <zorder>Evade</zorder>
+      <zorder>Interpose</zorder>
+      <zorder>OffsetPursuit</zorder>
+      <zorder>Pursuit</zorder>
+      <zorder>Wander</zorder>
+      <zorder>Alignment</zorder>
+      <zorder>Separation</zorder>
+      <zorder>Cohesion</zorder>
+      <zorder>Shoal</zorder>
+      <zorder>FollowPath</zorder>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>569</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>607</x>
+     <y>569</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NumObstacles</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setNumObstacles(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NumAgents</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setNumAgents(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MinObsRadius</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setMinObstacleRadius(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>303</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>178</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MaxObsRadius</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setMaxObstacleRadius(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>130</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>224</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NumCellsX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setNumCellsX(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SmoothingSamples</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setNumSamplesForSmoothing(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>431</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>279</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SteeringTweaker</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setSteeringForceTweaker(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>NumCellsY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setNumCellsY(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>559</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>373</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SteeringForce</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setSteeringForce(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>73</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MaxSpeed</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setMaxSpeed(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VehicleMass</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setVehicleMass(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>112</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>VehicleScale</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setVehicleScale(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>96</x>
+     <y>559</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Wander</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleWander()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>346</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>329</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cohesion</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleCohesion()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>497</x>
+     <y>116</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Separation</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleSeparation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>362</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleFlocking()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>527</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Alignment</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleAllignment()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>406</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>359</x>
+     <y>245</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Separation</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Wander</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Alignment</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Cohesion</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Wander</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>346</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Cohesion</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>466</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Separation</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>68</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flock</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>Alignment</receiver>
+   <slot>setChecked(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>466</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>209</x>
+     <y>406</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Shoal</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleShoal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>42</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>414</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Seek</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleSeek()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>376</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Flee</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleFlee()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>360</x>
+     <y>76</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Arrive</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleArrive()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>561</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Hide</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleHide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>503</x>
+     <y>69</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Evade</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleEvade()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Interpose</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleInterpose()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Pursuit</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>togglePursuit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>494</x>
+     <y>187</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OffsetPursuit</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleOffsetPursuit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>286</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>83</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>FollowPath</sender>
+   <signal>clicked()</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>toggleFollowPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>346</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>457</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleSpinBox</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>SetupDialog</receiver>
+   <slot>setVehicleScale(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>setNumAgents(int)</slot>
+  <slot>setNumObstacles(int)</slot>
+  <slot>setMinObstacleRadius(double)</slot>
+  <slot>setMaxObstacleRadius(double)</slot>
+  <slot>setNumSamplesForSmoothing(int)</slot>
+  <slot>setNumCellsX(int)</slot>
+  <slot>setNumCellsY(int)</slot>
+  <slot>setSteeringForceTweaker(double)</slot>
+  <slot>setSteeringForce(double)</slot>
+  <slot>setMaxSpeed(double)</slot>
+  <slot>setVehicleMass(double)</slot>
+  <slot>setVehicleScale(double)</slot>
+  <slot>toggleFlee()</slot>
+  <slot>toggleWallAvoid()</slot>
+  <slot>toggleSeek()</slot>
+  <slot>toggleFollowPath()</slot>
+  <slot>toggleArrive()</slot>
+  <slot>toggleInterpose()</slot>
+  <slot>toggleWander()</slot>
+  <slot>toggleHide()</slot>
+  <slot>togglePursuit()</slot>
+  <slot>toggleOffsetPursuit()</slot>
+  <slot>toggleEvade()</slot>
+  <slot>toggleCohesion()</slot>
+  <slot>toggleSeparation()</slot>
+  <slot>toggleObstacleAvoidance()</slot>
+  <slot>toggleFlocking()</slot>
+  <slot>toggleAllignment()</slot>
+  <slot>toggleWallAvoidance()</slot>
+  <slot>toggleShoal()</slot>
+  <slot>ssetVehicleScale(int)</slot>
+  <slot>slot2()</slot>
+ </slots>
+</ui>
